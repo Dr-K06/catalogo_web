@@ -1,34 +1,27 @@
 import Link from "next/link";
+import styles from "./Header.module.css";
 
 export default function Header() {
   return (
-    <header
-      style={{
-        padding: "20px",
-        background: "#222",
-      }}
-    >
-      <nav
-        style={{
-          display: "flex",
-          gap: "20px",
-        }}
-      >
-        <Link href="/">Home</Link>
+    <header className={styles.header}>
+      <nav className={styles.nav}>
+        <Link className={styles.link} href="/">
+          Home
+        </Link>
 
-        <Link href="/produtos">
+        <Link className={styles.link} href="/produtos">
           Produtos
         </Link>
 
-        <Link href="/sobre">
+        <Link className={styles.link} href="/sobre">
           Sobre
         </Link>
 
-        <Link href="/favoritos">
+        <Link className={styles.link} href="/favoritos">
           Favoritos
         </Link>
 
-        <Link href="/contato">
+        <Link className={styles.link} href="/contato">
           Contato
         </Link>
       </nav>

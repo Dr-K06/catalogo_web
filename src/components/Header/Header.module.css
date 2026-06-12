@@ -1,0 +1,17 @@
+.header {
+  background: #222;
+  padding: 20px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  color: white;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
