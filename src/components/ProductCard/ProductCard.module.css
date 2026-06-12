@@ -1,0 +1,20 @@
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  color: blue;
+}
+
+.link:hover {
+  opacity: 0.8;
+}

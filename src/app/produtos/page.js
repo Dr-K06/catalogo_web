@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import ProductCard from "@/components/ProductCard/ProductCard";
+import SearchBar from "@/components/SearchBar/SearchBar";
 
 export default function Produtos() {
   const [busca, setBusca] = useState("");
@@ -13,7 +14,7 @@ export default function Produtos() {
     { id: 4, nome: "Monitor", preco: 1200 },
   ];
 
-  const filtrados = produtos.filter((produto) =>
+  const produtosFiltrados = produtos.filter((produto) =>
     produto.nome.toLowerCase().includes(busca.toLowerCase())
   );
 
@@ -21,17 +22,9 @@ export default function Produtos() {
     <main>
       <h1>Produtos</h1>
 
-      <input
-        type="text"
-        placeholder="Pesquisar produto..."
-        value={busca}
-        onChange={(e) => setBusca(e.target.value)}
-      />
+      <SearchBar busca={busca} setBusca={setBusca} />
 
-      <br />
-      <br />
-
-      {filtrados.map((produto) => (
+      {produtosFiltrados.map((produto) => (
         <ProductCard
           key={produto.id}
           id={produto.id}
